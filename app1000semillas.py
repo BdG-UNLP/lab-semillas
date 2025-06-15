@@ -94,22 +94,6 @@ if pesadas:
         ax.grid(True, linestyle='--', alpha=0.5)
 
         st.pyplot(fig)
-
-        # Formulario de correo
-        st.subheader("📧 Solicitar informe por correo electrónico")
-        with st.form("form_mail"):
-            correo = st.text_input("Ingrese su correo electrónico para solicitar el informe:")
-            enviar = st.form_submit_button("📨 Enviar solicitud")
-
-            if enviar:
-                if "@" in correo and "." in correo:
-                    st.success(f"✅ Solicitud enviada. Te contactaremos a {correo}.")
-                    try:
-                        with open("solicitudes_mail.csv", "a") as f:
-                            f.write(correo + "\n")
-                    except Exception as e:
-                        st.warning(f"⚠️ No se pudo guardar la dirección: {e}")
-                else:
-                    st.error("❌ Por favor, ingrese un correo válido.")
+    
 else:
     st.info("📌 Esperando datos para el análisis.")
