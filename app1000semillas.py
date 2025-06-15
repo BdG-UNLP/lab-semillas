@@ -7,7 +7,7 @@ st.set_page_config(page_title="Análisis de Pesadas", layout="centered")
 
 st.title("🌾 Análisis de Peso de 1000 Semillas")
 st.write(
-    "Cálculo del peso promedio de 1000 semillas a partir del peso de ocho o más réplicas de 100 semillas."
+    "Cálculo del peso promedio de 1000 semillas a partir del peso de ocho o más réplicas de 100 semillas..."
 )
 
 # Elegir método de entrada
@@ -94,6 +94,6 @@ if pesadas:
         ax.grid(True, linestyle='--', alpha=0.5)
 
         st.pyplot(fig)
-    
+
 else:
     st.info("📌 Esperando datos para el análisis.")
